@@ -50,11 +50,11 @@ include_graphics(path_concat(imageDirectory, "crab2D.gif"))
 ## ----crabs 4D gif, echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, fig.width=4, fig.height=3, fig.align="center", fig.cap = "GIF 2: 4D grand tour"----
 include_graphics(path_concat(imageDirectory, "crab4D.gif"))
 
-## ----`l_tour` class, eval = FALSE---------------------------------------------
+## ----`l_tour` class, eval = FALSE-----------------------------------------------
 #  class(p1) # class(p0)
 #  # > [1] "l_tour" "loon"
 
-## ----`l_tour` getLoon, eval = FALSE-------------------------------------------
+## ----`l_tour` getLoon, eval = FALSE---------------------------------------------
 #  w <- l_getPlots(p1)
 #  class(w)
 #  # > [1] "l_serialaxes" "loon"
@@ -119,7 +119,7 @@ include_graphics(path_concat(imageDirectory, "facets.gif"))
 ## ----crabs pairs gif, echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, fig.width=4, fig.height=3, fig.align="center", fig.cap = "GIF 4: pairs plot"----
 include_graphics(path_concat(imageDirectory, "pairs.gif"))
 
-## ----`l_tour_compound` class, eval = FALSE------------------------------------
+## ----`l_tour_compound` class, eval = FALSE--------------------------------------
 #  class(pp) # or class(pf)
 #  # > [1] "l_tour_compound" "loon"
 

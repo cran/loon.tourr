@@ -25,7 +25,6 @@ path_concat <- function(path1, ..., sep="/") {
   # even sep = "\\" or possibly something else. 
   paste(path1, ..., sep = sep)
 }
-library(RDRToolbox)
 
 ## ----table, echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, fig.width=4, fig.height=3, fig.align="center"----
 data.frame(
@@ -140,6 +139,7 @@ kable(PCA, row.names = TRUE,
       digits = 3)
 
 ## ----LLE, warning=FALSE, message=FALSE, error=FALSE, fig.width=4, fig.height=3, fig.align="center", eval = FALSE----
+#  library(RDRToolbox)
 #  lle <- low_dim_knn_pred(2:5,
 #                          fun = function(data, d) {
 #                            LLE(data, dim = d, k = 5)
