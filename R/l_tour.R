@@ -26,20 +26,11 @@
 #' \code{\link{planned_tour}}, and etc}
 #' \item {Argument \code{as.l_tour}
 #' \itemize{
-#' \item{If \code{TRUE}, a \code{l_tour} (or a \code{l_tour_compound}) object is returned. It is a list essentially with the
-#' first object \code{loon} (tcl) widget and the second object matrix of projection vectors.
-#' The benefit is that the matrix of projection vectors can be accessed via function \code{`[`} (or \code{\link{l_cget}}).
-#' However, the drawback is that, since it is not a valid \code{loon} (tcl) widget
-#' (call \code{l_isLoonWidget} would return **\code{FALSE}**)}
-#' \item{If \code{FALSE}: a valid \code{loon} (tcl) widget (call \code{l_isLoonWidget} would return "TRUE") or a \code{l_compound}
-#' object will be returned so that the matrix of projection vectors cannot be accessed directly from it.
-#' However, function \code{\link{l_getProjection}} could return an estimated one.}
+#' \item{If set to \code{TRUE}, the function returns an \code{l_tour} (or an \code{l_tour_compound}) object. Essentially, this object is a list with the first element being a \code{loon} (Tcl) widget and the second element a matrix of projection vectors. The advantage of this setup is that the matrix of projection vectors can be easily accessed using the \code{`[`} function (or the \code{l_cget} function). However, a limitation is that it does not constitute a valid \code{loon} (Tcl) widget-calling \code{l_isLoonWidget} would return \code{FALSE}. Consequently, many of loon's functionalities remain inaccessible.}
+#' \item{If set to \code{FALSE}, the function returns either a \code{loon} (Tcl) widget (where calling \code{l_isLoonWidget} would return \code{TRUE}) or an \code{l_compound} object. In this case, the matrix of projection vectors is not directly accessible from it. However, the \code{l_getProjection} function can be used to retrieve an estimated matrix of projection vectors.}
 #' }
 #' }
-#' \item {The \code{scaling} state defines how the data is scaled. The axes
-#' display 0 at one end and 1 at the other. For the following explanation
-#' assume that the data is in a n x p dimensional matrix. The scaling options
-#' are then
+#' \item {The \code{scaling} state defines how the data is scaled. The axes display 0 at one end and 1 at the other. For the following explanation assume that the data is in a n x p dimensional matrix. The scaling options are then
 #' \tabular{ll}{
 #' variable \tab per column scaling\cr
 #' observation \tab per row scaling\cr
@@ -119,7 +110,7 @@ l_tour <- function(data, scaling = c('data', 'variable', 'observation', 'sphere'
     }
   )
 
-  ###### THIS IS A HACK IN `TOURR`! Hopefully, they can fix this later.
+  ###### THIS IS A HACK IN `TOURR`! Hopefully, it can be fixed later.
   record <- tibble::tibble(basis = list(), index_val = numeric(),
                            info = character(), method = character(),
                            alpha = numeric(),

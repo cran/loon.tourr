@@ -49,11 +49,11 @@ The limits of the rectangle covered by the grid as \code{c(xl, xu, yl, yu)}.
 
 \item{linewidth}{the line width}
 
-\item{nlevels}{number of contour levels desired \bold{iff}
-    \code{levels} is not supplied.}
+\item{nlevels}{As described in \code{grDevices::contourLines}: number of
+contour levels desired iff \code{levels} is not supplied.}
 
-\item{levels}{numeric vector of levels at which to draw contour
-    lines.}
+\item{levels}{As described in \code{grDevices::contourLines}: numeric vector
+of levels at which to draw contour lines.}
 
 \item{label}{label used in the layers inspector}
 

@@ -246,12 +246,10 @@ callback_plot.l_serialaxes <- function(widget, initialTour, tours, var = 0L, ...
       do.call(loon::l_configure, newStates)
 
     } else {
-      do.call(loon::l_configure,
-              c(
-                list(target = widget,
-                     data = tour),
-                states
-              ))
+
+      states$data <- tour
+      states$target <- widget
+      do.call(loon::l_configure, states)
     }
   }
 }
